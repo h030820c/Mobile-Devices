@@ -286,6 +286,7 @@ if (favouriteBtn) {
 
     if (displayFavourites) {
         var chosenFav = JSON.parse(localStorage.getItem("Favourite"));
+        console.log(chosenFav);
         if(chosenFav !== null){
         for (var y = 0; y <= chosenFav.length; y++) {
             console.log(y);
