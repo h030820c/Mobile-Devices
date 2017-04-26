@@ -1,5 +1,6 @@
 var Timetable = [
     {
+      
         "Route": "4A",
         "From": "Hanley",
         "To": "Festival Park",
@@ -17,9 +18,11 @@ var Timetable = [
                  "Kidsgrove Bus Station",
                  "Red Street", "Butt Lane",
                  "Chesterton Street", "London Road",
-                 "Brampton Lane", "Newcastle Bus Station"]
+                 "Brampton Lane", "Newcastle Bus Station"],
+        "map":"map3"
      },
     {
+          "id": "1",
         "Route": "22",
         "From": "Longton",
         "To": "Blurton",
@@ -37,9 +40,11 @@ var Timetable = [
                  "Kidsgrove Bus Station",
                  "Red Street", "Butt Lane",
                  "Chesterton Street", "London Road",
-                 "Brampton Lane", "Newcastle Bus Station"]
+                 "Brampton Lane", "Newcastle Bus Station"],
+        "map":"map2"
     },
     {
+          "id": "2",
         "Route": "25",
         "From": "Hanley",
         "To": "Keele University",
@@ -57,9 +62,11 @@ var Timetable = [
                  "Kidsgrove Bus Station",
                  "Red Street", "Butt Lane",
                  "Chesterton Street", "London Road",
-                 "Brampton Lane", "Newcastle Bus Station"]
+                 "Brampton Lane", "Newcastle Bus Station"],
+        "map":"map5"
     },
     {
+          "id": "3",
         "Route": "37",
         "From": "Lyme Bussiness park",
         "To": "Bentilee",
@@ -77,9 +84,11 @@ var Timetable = [
                  "Kidsgrove Bus Station",
                  "Red Street", "Butt Lane",
                  "Chesterton Street", "London Road",
-                 "Brampton Lane", "Newcastle Bus Station"]
+                 "Brampton Lane", "Newcastle Bus Station"],
+        "map":"map3"
     },
     {
+          "id": "4",
         "Route": "72",
         "From": "Clayton",
         "To": "Westbury Park",
@@ -97,9 +106,11 @@ var Timetable = [
                  "Kidsgrove Bus Station",
                  "Red Street", "Butt Lane",
                  "Chesterton Street", "London Road",
-                 "Brampton Lane", "Newcastle Bus Station"]
+                 "Brampton Lane", "Newcastle Bus Station"],
+        "map":"map4"
     },
     {
+          "id": "5",
         "Route": "90",
         "From": "Wolstanton",
         "To": "Newcaslte",
@@ -117,9 +128,11 @@ var Timetable = [
                  "Kidsgrove Bus Station",
                  "Red Street", "Butt Lane",
                  "Chesterton Street", "London Road",
-                 "Brampton Lane", "Newcastle Bus Station"]
+                 "Brampton Lane", "Newcastle Bus Station"],
+        "map":"map2"
     },
     {
+          "id": "6",
         "Route": "97",
         "From": "Ball Green",
         "To": "Newcastle",
@@ -137,9 +150,12 @@ var Timetable = [
                  "Kidsgrove Bus Station",
                  "Red Street", "Butt Lane",
                  "Chesterton Street", "London Road",
-                 "Brampton Lane", "Newcastle Bus Station"]
+                 "Brampton Lane", "Newcastle Bus Station"],
+        "map":"map1"
+        
     },
     {
+          "id": "7",
         "Route": "98",
         "From": "Chell Heath",
         "To": "Newcastle",
@@ -157,9 +173,11 @@ var Timetable = [
                  "Kidsgrove Bus Station",
                  "Red Street", "Butt Lane",
                  "Chesterton Street", "London Road",
-                 "Brampton Lane", "Newcastle Bus Station"]
+                 "Brampton Lane", "Newcastle Bus Station"],
+        "map":"map3"
     },
     {
+          "id": "8",
         "Route": "99",
         "From": "Stafford",
         "To": "Newcastle",
@@ -177,9 +195,11 @@ var Timetable = [
                  "Kidsgrove Bus Station",
                  "Red Street", "Butt Lane",
                  "Chesterton Street", "London Road",
-                 "Brampton Lane", "Newcastle Bus Station"]
+                 "Brampton Lane", "Newcastle Bus Station"],
+        "map":"map1"
     },
     {
+          "id": "9",
         "Route": "99",
         "From": "Stafford",
         "To": "Newcastle",
@@ -197,7 +217,8 @@ var Timetable = [
                  "Kidsgrove Bus Station",
                  "Red Street", "Butt Lane",
                  "Chesterton Street", "London Road",
-                 "Brampton Lane", "Newcastle Bus Station"]
+                 "Brampton Lane", "Newcastle Bus Station"],
+        "map":"map5"
     }
 
  ]

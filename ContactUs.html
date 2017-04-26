@@ -6,6 +6,24 @@
     <meta charset="UTF-8">
     <title>First Stop</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="icons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="icons/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="icons/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="icons/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="icons/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="icons/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="icons/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="icons/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="icons/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="icons/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+<link rel="manifest" href="manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="icons/ms-icon-144x144.png">
+<meta name="theme-color" content="#43A047">
 </head>
 
 <body>
@@ -36,10 +54,17 @@
     <div class="Contact">
        <h3>Contact</h3>
         <a href="tel:+44782717717"><span>&#9742;</span> 01782 717717</a><br>
-        <a href="mailto:enquires@nulbuses.com"><span class="envelope">&#9993;</span> enquires@nulbuses.com</a><br>
     </div>
-    <div id="map">
-    </div>
+    <form action="mailto:stevenhootongraphics@gmail.com" method="post" enctype="text/plain">
+        <label for="Name">Name:</label>
+        <input type="text" name="Name"> <br>
+        <label for="Name">Email:</label>
+        <input type="email" name="Email" id="Email" class="contact-input"><br>
+        <label for="Name">Message:</label><br>
+        <textarea name="Comment" id="Comment" class="contact-input"></textarea>
+        <button type="submit" name="submit" id="submit">Submit</button>
+    </form>
+
     </div>
         <footer>
 
@@ -47,5 +72,5 @@
 </body>
 <script src="data.json"></script>
 <script src="script.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAYtiJpXh3CHsaOAncAEh8AXp6C9BoO6wY&callback=initMap2"></script>
+
 </html

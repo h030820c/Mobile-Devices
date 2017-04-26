@@ -36,42 +36,23 @@ function initMap() {
             icon: 'info-i_maps.png'
         }
     };
-
-
     var thisBusTimes = "";
-
     function addMarker(feature) {
         var content = "";
-
         function addContent() {
             thisBusTimes = "";
-
+            content ="";
             infowindow.open(map, marker);
-
-
             if (features[marker.get("id")].type == "bus") {
                 for (var w = 0; w <= Timetable[marker.get("id")].Times.length - 1; w++) {
-
                     thisBusTimes += "<p>" + Timetable[marker.get("id")].Times[w] + "</p>";
-
-
-
                     content = "<div class='clicked-bus-times'><h4>" + Timetable[marker.get('id')].Route + "</h4><div id='bus-from-to '> <h5>" + Timetable[marker.get("id")].From + "-" + Timetable[marker.get("id")].To + "</h5></div><div id='This-bus-times'>" + thisBusTimes + "</div> </div>";
-
                 }
             } else if (features[marker.get("id")].type == "busstop") {
                 for (var b = 0; b < features[marker.get("id")].Buses.length; b++) {
                     content += "<div class='clicked-bus-times'><h4>" + features[marker.get('id')].Buses[b].Route + "</h4><div id='bus-from-to'> <h5>" + features[marker.get("id")].Buses[b].From + "-" + features[marker.get("id")].Buses[b].To + "</h5></div></div>";
-
                 }
-
-
-
             }
-
-
-
-
             infowindow.setContent(content);
         }
 
@@ -97,10 +78,19 @@ function initMap() {
             type: 'busstop',
             BusNum: '0',
             Buses: [Timetable[0], Timetable[3], Timetable[8]]
+          },{
+            position: new google.maps.LatLng(53.008241, -2.180795),
+            type: 'busstop',
+            BusNum: '1',
+            Buses: [Timetable[3], Timetable[6], Timetable[9]]
           }, {
             position: new google.maps.LatLng(53.0110, -2.1809),
             type: 'bus',
-            BusNum: '1'
+            BusNum: '2'
+          }, {
+            position: new google.maps.LatLng(53.008011, -2.177792),
+            type: 'bus',
+            BusNum: '3'
           }];
 
     for (var i = 0, feature; feature = features[i]; i++) {
@@ -190,13 +180,15 @@ for (var k = 0; k < Timetable.length; k++) {
     }
 }
 if (displayResults) {
+
+
+
     if (found.length <= 0) {
 
-        console.log("NO data Found");
+        displayResults.innerHTML = "<h3 id='nodata'>No Results Found</h3>";
     } else {
         for (var l = 0; l < found.length; l++) {
-
-            displayResults.innerHTML += "<div class='bus-number' id='" + l + "'><a href='timeTableResults.html' class='busroute'> <p class='bus-route-num'>" + Timetable[l].Route + "</p> <div  class='bus-locations'><p>" + Timetable[l].From + "-" + Timetable[i].To + "</p><div class='recent-times'></div></div></a> </div>";
+            displayResults.innerHTML += "<div class='bus-number' id='" + found[l].id + "'><a href='timeTableResults.html' class='busroute'> <p class='bus-route-num'>" + found[l].Route + "</p> <div  class='bus-locations'><p>" + found[l].From + "-" + found[l].To + "</p><div class='recent-times'></div></div></a> </div>";
         }
     }
 }
@@ -234,11 +226,13 @@ function detailNum(event) {
 //Bus times Results
 
 var busNumber = document.getElementById("bus-number");
+var mapImage = document.getElementById("map2");
 var timeTableDetailTimes = document.getElementById("timeTable-detail-times");
 var busFromTo = document.getElementById("bus-from-to");
 var busNum = localStorage.getItem("Chosen");
 if (busNumber) {
     busNumber.innerHTML = "<h1>" + Timetable[busNum].Route + "</h1>";
+    mapImage. innerHTML = "<img src='Images/maps/"+ Timetable[busNum].map +".png' alt='"+ Timetable[busNum].from +"-"+ Timetable[busNum].to +" Map' class='mapimage'>";
 }
 if (busFromTo) {
     busFromTo.innerHTML = "<h2>" + Timetable[busNum].From + "-" + Timetable[busNum].To + "</h2>";
@@ -275,7 +269,7 @@ if (favouriteBtn) {
     favouriteBtn.addEventListener("click", addFavourite);
 
     function addFavourite() {
-        favourites = JSON.parse(localStorage.getItem("Favourite"));
+       favourites = JSON.parse(localStorage.getItem("Favourite"));
         favourites.push({
             'route': Timetable[busNum].Route,
             'from': Timetable[busNum].From,
@@ -285,18 +279,21 @@ if (favouriteBtn) {
         localStorage.setItem("Favourite", JSON.stringify(favourites));
         console.log("Hello");
     }
+    
+}
     //Display Favourites
     var displayFavourites = document.getElementById("display-favourites");
 
     if (displayFavourites) {
         var chosenFav = JSON.parse(localStorage.getItem("Favourite"));
-        for (var i = 0; i < chosenFav.length; i++) {
-            displayFavourites.innerHTML += "<div class='bus-number' id='" + i + "'><a href='timeTableResults.html' class='busroute'> <p class='bus-route-num'>" + chosenFav[i].route + "</p> <div  class='bus-locations'><p>" + chosenFav[i].from + "-" + chosenFav[i].to + "</p>";
+        for (var y = 0; y < chosenFav.length; y++) {
+            console.log(y);
+            displayFavourites.innerHTML += "<div class='bus-number' id='" + y + "'><a href='timeTableResults.html' class='busroute'> <p class='bus-route-num'>" + chosenFav[y].route + "</p> <div  class='bus-locations'><p>" + chosenFav[y].from + "-" + chosenFav[y].to + "</p>";
 
         }
 
     }
-}
+
 
 //bus Route
 
