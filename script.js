@@ -197,10 +197,6 @@ if (displayResults) {
         for (var l = 0; l < found.length; l++) {
 
             displayResults.innerHTML += "<div class='bus-number' id='" + i + "'><a href='timeTableResults.html' class='busroute'> <p class='bus-route-num'>" + Timetable[i].Route + "</p> <div  class='bus-locations'><p>" + Timetable[i].From + "-" + Timetable[i].To + "</p><div class='recent-times'></div></div></a> </div>";
-
-        for (var q = 0; q < 5; q++) {
-            recent[i].innerHTML += "<p>" + Timetable[i].Times[q] + "</p>";
-        }
         }
     }
 }
