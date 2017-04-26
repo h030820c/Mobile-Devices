@@ -3,6 +3,13 @@ var CACHE_NAME = 'gih-cache-v1';
 var CACHED_URLS = [
     // Our HTML
     BASE_PATH + 'index.html',
+    BASE_PATH + 'ContactUs.html',
+    BASE_PATH + 'fairsAndPrices.html',
+    BASE_PATH + 'favourites.html',
+    BASE_PATH + 'RouteResults.html',
+    BASE_PATH + 'timeTableResults.html',
+    BASE_PATH + 'timetables.html',
+    BASE_PATH + 'TsandCs.html',
     
     // Images for favicons
     BASE_PATH + 'icons/android-icon-36x36.png',
