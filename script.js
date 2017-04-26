@@ -346,7 +346,7 @@ if (BusRouteNum) {
 
 var timetables = document.getElementById("timetables");
 
-timetables.innerHTML += "<p>Hello</p>";
+timetables.innerHTML += "<h2>My Favourites</h2>";
 var fav = JSON.parse(localStorage.getItem("Favourite"));
     for (var j=0; j<5; j++) {
 
