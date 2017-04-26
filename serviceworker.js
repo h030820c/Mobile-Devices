@@ -22,7 +22,6 @@ var CACHED_URLS = [
     BASE_PATH + 'icons/favicon-32x32.png',
 
     //Images for page
-    BASE_PATH + 'icons/offlinemap.jpg',
     BASE_PATH + 'icons/favicon-16x16.png',
     BASE_PATH + 'icons/favicon-32x32.png',
     BASE_PATH + 'icons/favicon-96x96.png',
@@ -32,6 +31,7 @@ var CACHED_URLS = [
     BASE_PATH + 'icons/ms-icon-310x310.png',
 
     // JavaScript
+    BASE_PATH + 'offline-map.js',
     BASE_PATH + 'script.js',
     BASE_PATH + 'data.json',
     // Manifest
