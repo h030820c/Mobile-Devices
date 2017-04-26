@@ -2,7 +2,9 @@
     margin: 0;
     padding: 0;
 }
-
+#timetables{
+ display: none;   
+}
 .top-nav-bar,
 footer {
     width: 100%;
