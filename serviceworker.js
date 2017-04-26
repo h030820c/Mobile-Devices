@@ -15,10 +15,6 @@ var CACHED_URLS = [
 
     //Images for page
     BASE_PATH + 'icons/offlinemap.jpg',
-    BASE_PATH + 'icons/dino.png',
-    BASE_PATH + 'icons/jack.jpg',
-    BASE_PATH + 'icons/paddy.jpg',
-    BASE_PATH + 'icons/favicon.ico',
     BASE_PATH + 'icons/favicon-16x16.png',
     BASE_PATH + 'icons/favicon-32x32.png',
     BASE_PATH + 'icons/favicon-96x96.png',
@@ -53,8 +49,8 @@ self.addEventListener('fetch', function(event) {
   if (requestURL.pathname === BASE_PATH + 'index.html') {
     event.respondWith(
       caches.open(CACHE_NAME).then(function(cache) {
-        return cache.match('first.html').then(function(cachedResponse) {
-          var fetchPromise = fetch('first.html').then(function(networkResponse) {
+        return cache.match('index.html').then(function(cachedResponse) {
+          var fetchPromise = fetch('index.html').then(function(networkResponse) {
             cache.put('first.html', networkResponse.clone());
             return networkResponse;
           });
