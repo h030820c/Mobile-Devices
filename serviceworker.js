@@ -73,7 +73,14 @@ self.addEventListener('fetch', function(event) {
         googleMapsAPIJS+'&'+Date.now(),
         { mode: 'no-cors', cache: 'no-store' }
       ).catch(function() {
-        return caches.match('offline-map.js');
+        var map = document.getElementById('map');
+          for (var i = 0; i <= Timetable.length - 1; i++) {
+        map.innerHTML += "<div class='bus-number' id='" + i + "'><a href='timeTableResults.html' class='busroute'> <p class='bus-route-num'>" + Timetable[i].Route + "</p> <div  class='bus-locations'><p>" + Timetable[i].From + "-" + Timetable[i].To + "</p><div class='recent-times'></div></div></a> </div>";
+
+        for (var q = 0; q < 5; q++) {
+            recent[i].innerHTML += "<p>" + Timetable[i].Times[q] + "</p>";
+        }
+    }
       })
     );
   } else if (
