@@ -264,12 +264,12 @@ if (showMore) {
 }
 //Favorites
 var favouriteBtn = document.getElementById("favourite-btn");
-var favourites = [];
+var favourites = JSON.parse(localStorage.getItem("Favourite"));
 if (favouriteBtn) {
     favouriteBtn.addEventListener("click", addFavourite);
 
     function addFavourite() {
-       favourites = JSON.parse(localStorage.getItem("Favourite"));
+
         favourites.push({
             'route': Timetable[busNum].Route,
             'from': Timetable[busNum].From,
