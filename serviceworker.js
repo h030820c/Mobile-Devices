@@ -22,7 +22,7 @@ var CACHED_URLS = [
     BASE_PATH + 'icons/favicon-32x32.png',
 
     //Images for page
-   // BASE_PATH + 'icons/offlinemap.jpg',
+    BASE_PATH + 'icons/offlinemap.jpg',
     BASE_PATH + 'icons/favicon-16x16.png',
     BASE_PATH + 'icons/favicon-32x32.png',
     BASE_PATH + 'icons/favicon-96x96.png',
