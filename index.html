@@ -68,7 +68,17 @@
 
     </footer>
 </body>
-    <script src="serviceworker.js"></script>
+          <script>
+      if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('serviceworker.js').then(function(registration) {
+
+    console.log('Service worker registered successfully');
+  }).catch(function(err) {
+    console.log('Service worker registration failed: ', err);
+  });
+}
+
+      </script>
     <script src="data.json"></script>
     <script src="script.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAYtiJpXh3CHsaOAncAEh8AXp6C9BoO6wY&callback=initMap"></script>
