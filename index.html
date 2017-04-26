@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>First Stop</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="icons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="icons/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="icons/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="icons/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="icons/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="icons/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="icons/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="icons/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="icons/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="icons/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+<link rel="manifest" href="manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="icons/ms-icon-144x144.png">
+<meta name="theme-color" content="#43A047">
+</head>
+
+<body>
+    <div class="top-nav-bar">
+        <p id="hamburger-btn">&#9776;</p>
+        <h1>First Stop</h1>
+        <p><a href="favourites.html" class="favourite-star">&#9734;</a></p>
+    </div>
+    <div class="side-nav" id="hamburger-nav">
+        <ul class="nav-items">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="timetables.html">Time Tables</a></li>
+            <li><a href="bus-route.html">Bus Route</a></li>
+            <li><a href="fairsAndPrices.html">Fairs & Prices</a></li>
+            <li><a href="ContactUs.html">Contact Us</a></li>
+            <li><a href="TsandCs.html">T's & C's</a></li>
+        </ul>
+    </div>
+    <form class="home-search-form" id="search-form">
+        <label class="search-bar-label" for="search-bar"><h2>Search</h2></label>
+        <div class="search-bar-block">
+            
+            <input type="text" class="search-bar" name="search-bar" id="search-bar">
+            <p class="search-submit"><a id="Search-Button" href="search-results.html">&#128269;</a></p>
+        </div>
+        <div class="home-search-radio">
+            <input checked  type="radio" class="radio-unckecked" value="Number" id="radio-number" name="search-radio">
+            <label for="radio-number">Number</label>
+            
+            <input type="radio" class="radio-unckecked" value="From" id="radio-location" name="search-radio">
+            <label for="radio-location">From</label>
+            
+            <input type="radio" class="radio-unckecked" value="To" id="radio-time" name="search-radio">
+            <label for="radio-time">To</label>
+            
+        </div>
+    </form>
+    <div id="map">
+
+    </div>
+    <footer>
+
+    </footer>
+</body>
+    <script src="data.json"></script>
+    <script src="script.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAYtiJpXh3CHsaOAncAEh8AXp6C9BoO6wY&callback=initMap"></script>
+</html
