@@ -10,6 +10,7 @@ var CACHED_URLS = [
     BASE_PATH + 'timeTableResults.html',
     BASE_PATH + 'timetables.html',
     BASE_PATH + 'TsandCs.html',
+    BASE_PATH + 'bus-route.html',
     
     // Images for favicons
     BASE_PATH + 'icons/android-icon-36x36.png',
