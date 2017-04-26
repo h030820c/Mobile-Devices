@@ -264,7 +264,12 @@ if (showMore) {
 }
 //Favorites
 var favouriteBtn = document.getElementById("favourite-btn");
+if(localStorage.getItem("Favourite") == null){
+ var favourites = [];   
+    
+}else{
 var favourites = JSON.parse(localStorage.getItem("Favourite"));
+}
 if (favouriteBtn) {
     favouriteBtn.addEventListener("click", addFavourite);
 
