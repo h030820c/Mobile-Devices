@@ -27,10 +27,10 @@ function initMap() {
     var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
     var icons = {
         bus: {
-            icon: 'images/Icons/icon.png'
+            icon: 'Images/Icons/icon.png'
         },
         busstop: {
-            icon: 'images/Icons/bus-stop.png'
+            icon: 'Images/Icons/bus-stop.png'
         },
         info: {
             icon: 'info-i_maps.png'
