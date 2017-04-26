@@ -286,10 +286,14 @@ if (favouriteBtn) {
 
     if (displayFavourites) {
         var chosenFav = JSON.parse(localStorage.getItem("Favourite"));
+        if(chosenFav !== null){
         for (var y = 0; y < chosenFav.length; y++) {
             console.log(y);
             displayFavourites.innerHTML += "<div class='bus-number' id='" + y + "'><a href='timeTableResults.html' class='busroute'> <p class='bus-route-num'>" + chosenFav[y].route + "</p> <div  class='bus-locations'><p>" + chosenFav[y].from + "-" + chosenFav[y].to + "</p>";
 
+        }
+        }else{
+         console.log("No Data Found");   
         }
 
     }
