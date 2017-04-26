@@ -5,6 +5,22 @@
 #timetables{
  display: none;   
 }
+
+#timetables{
+ background-color: #43a047;
+color: white;
+    width: 90%;
+    margin: 0 auto;
+    
+}
+#timetables .bus-number a p{
+color: white;    
+}
+.fav-hr{
+ width: 90%;
+    margin: 0 auto;
+    border-color: white;
+}
 .top-nav-bar,
 footer {
     width: 100%;

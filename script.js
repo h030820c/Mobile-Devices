@@ -346,11 +346,11 @@ if (BusRouteNum) {
 
 var timetables = document.getElementById("timetables");
 
-timetables.innerHTML += "<hr><h2>My Favourites</h2>";
+timetables.innerHTML += "<h2>My Favourites</h2>";
 var fav = JSON.parse(localStorage.getItem("Favourite"));
     for (var j=0; j<5; j++) {
 
-       timetables.innerHTML += "<div class='bus-number' id='" + j + "'><a href='timeTableResults.html' class='busroute'> <p class='bus-route-num'>" + fav[j].route + "</p> <div  class='bus-locations'><p>" + fav[j].from + "-" + fav[j].to + "</p>";
+       timetables.innerHTML += "<div class='bus-number' id='" + j + "'><a href='timeTableResults.html' class='busroute'> <p class='bus-route-num'>" + fav[j].route + "</p> <div  class='bus-locations'><p>" + fav[j].from + "-" + fav[j].to + "</p></div></div><hr class='fav-hr'>";
         
     
     }
