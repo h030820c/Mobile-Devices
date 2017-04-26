@@ -188,6 +188,8 @@ if (displayResults) {
         displayResults.innerHTML = "<h3 id='nodata'>No Results Found</h3>";
     } else {
         for (var l = 0; l < found.length; l++) {
+            
+            
             displayResults.innerHTML += "<div class='bus-number' id='" + found[l].id + "'><a href='timeTableResults.html' class='busroute'> <p class='bus-route-num'>" + found[l].Route + "</p> <div  class='bus-locations'><p>" + found[l].From + "-" + found[l].To + "</p><div class='recent-times'></div></div></a> </div>";
         }
     }
@@ -343,13 +345,12 @@ if (BusRouteNum) {
 
 
 var timetables = document.getElementById("timetables");
-var recent = document.getElementsByClassName('recent-time');
 
+timetables.innerHTML += "<p>Hello</p>";
+var fav = JSON.parse(localStorage.getItem("Favourite"));
     for (var j=0; j<5; j++) {
-        console.log(Timetable[j]);
-        timetables.innerHTML += "<div class='bus-number' id='" + j + "'><a href='timeTableResults.html' class='busroute'> <p class='bus-route-num'>" + Timetable[j].Route + "</p> <div  class='bus-locations'><p>" + Timetable[j].From + "-" + Timetable[j].To + "</p><div class='recent-time'></div></div></a> </div>";
 
-        for (var z = 0; z < 5; z++) {
-            recent[j].innerHTML += "<p>" + Timetable[j].Times[z] + "</p>";
-        }
+       timetables.innerHTML += "<div class='bus-number' id='" + j + "'><a href='timeTableResults.html' class='busroute'> <p class='bus-route-num'>" + fav[j].route + "</p> <div  class='bus-locations'><p>" + fav[j].from + "-" + fav[j].to + "</p>";
+        
+    
     }
