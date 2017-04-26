@@ -14,7 +14,7 @@ var CACHED_URLS = [
     BASE_PATH + 'icons/favicon-32x32.png',
 
     //Images for page
-    BASE_PATH + 'icons/offlinemap.jpg',
+   // BASE_PATH + 'icons/offlinemap.jpg',
     BASE_PATH + 'icons/favicon-16x16.png',
     BASE_PATH + 'icons/favicon-32x32.png',
     BASE_PATH + 'icons/favicon-96x96.png',
@@ -29,7 +29,7 @@ var CACHED_URLS = [
     // Manifest
     BASE_PATH + 'manifest.json',
   // CSS and fonts
-    BASE_PATH + 'styles.css'
+    BASE_PATH + 'style.css'
 ];
 
 var googleMapsAPIJS = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyAYtiJpXh3CHsaOAncAEh8AXp6C9BoO6wY&callback=initMap';
