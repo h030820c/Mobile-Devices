@@ -1,1 +1,1 @@
-document.getElementById('map').style.display = "none";
+var map = document.getElementById('map').style.display = "none";
