@@ -346,6 +346,7 @@ var timetables = document.getElementById("timetables");
 var recent = document.getElementsByClassName('recent-time');
 
     for (var j=0; j<5; j++) {
+        console.log(Timetable[j]);
         timetables.innerHTML += "<div class='bus-number' id='" + j + "'><a href='timeTableResults.html' class='busroute'> <p class='bus-route-num'>" + Timetable[j].Route + "</p> <div  class='bus-locations'><p>" + Timetable[j].From + "-" + Timetable[j].To + "</p><div class='recent-time'></div></div></a> </div>";
 
         for (var z = 0; z < 5; z++) {
