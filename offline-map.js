@@ -1,5 +1,5 @@
 var map = document.getElementById("map").style.display = "none";
-var timetables = document.getElementById("tiimetables");
+var timetables = document.getElementById("timetables");
 var recent = document.getElementsByClassName('recent-times');
 
     for (var i = 0; i <= Timetable.length - 1; i++) {
