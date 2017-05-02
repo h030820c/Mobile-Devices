@@ -232,7 +232,7 @@ if (favouriteBtn) {
             'to': Timetable[busNum].To
         });
         localStorage.setItem("Favourite", JSON.stringify(favourites));
-        console.log("Hello");
+    
     }
 }
 //Display Favourites
@@ -243,7 +243,7 @@ if (displayFavourites) {
     if (chosenFav !== null) {
         DisplayFavourites();
     } else {
-        console.log("No Data Found");
+        displayFavourites.innerHTML = "No Favourites added";
     }
 }
 //bus Route
@@ -313,7 +313,6 @@ function deleteFavourite() {
     var choice = this.value;
     var favourites = JSON.parse(localStorage.getItem("Favourite"));
     favourites.splice(choice, 1);
-    console.log(favourites);
     localStorage.setItem("Favourite", JSON.stringify(favourites));
     displayFavourites.innerHTML = "";
     DisplayFavourites();
