@@ -49,7 +49,7 @@ var CACHED_URLS = [
     BASE_PATH + 'manifest.json',
   // CSS and fonts
     'https://fonts.googleapis.com/css?family=Roboto',
-    BASE_PATH + 'style.css'
+    BASE_PATH + 'style.css',
 ];
 
 var googleMapsAPIJS = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyAYtiJpXh3CHsaOAncAEh8AXp6C9BoO6wY&callback=initMap';
