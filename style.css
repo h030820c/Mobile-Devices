@@ -220,7 +220,9 @@ h2 {
     text-align: center;
     margin: 20px 0;
 }
-
+#bus-from-to h5{
+ padding:2px 5px;   
+}
 #timeTable-detail-times {
     width: 71%;
     height: 90px;
