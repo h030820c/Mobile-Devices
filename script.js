@@ -242,7 +242,7 @@ if (displayFavourites) {
     if (chosenFav !== null) {
         DisplayFavourites();
     } else {
-        displayFavourites.innerHTML = "No Favourites added";
+        displayFavourites.innerHTML += "No Favourites added";
     }
 }
 //bus Route
