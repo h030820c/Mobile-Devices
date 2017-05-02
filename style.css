@@ -325,7 +325,7 @@ address{
     display: flex;
     justify-content: flex-start;
     align-items: center; 
-    width: 130%;
+    width: 128%;
 }
 .bus-number div, .bus-number a{
   align-self: center;
