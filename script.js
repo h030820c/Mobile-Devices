@@ -385,12 +385,12 @@ function animateRight(obj, from, to) {
 function showHideDelete() {
     if (show === "open") {
         for (var i = 0; i < deleteBtns.length; i++) {
-            animateLeft(deleteBtns[i], 90, 3);
+            animateLeft(deleteBtns[i], 100, 3);
         }
         show = "close";
     } else {
         for (var i = 0; i < deleteBtns.length; i++) {
-            animateRight(deleteBtns[i], 3, 90);
+            animateRight(deleteBtns[i], 3, 100);
         }
         show = "open";
     }
