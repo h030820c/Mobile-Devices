@@ -166,7 +166,10 @@ footer {
 
 
 /*Bus timeTable*/
-
+#bus-times{
+ width: 95%;
+    margin: 0 auto;
+}
 .bus-number a {
     text-decoration: none;
     width: 100%;
