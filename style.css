@@ -282,9 +282,7 @@ h2 {
     margin: -36px;
 }
 #show-more{
- width: 30%;
-float: right;
-    margin-right: 33px;
+text-align: center;
     color: #43a047;
 }
 
