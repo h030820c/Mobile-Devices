@@ -31,14 +31,14 @@ var CACHED_URLS = [
     BASE_PATH + 'icons/ms-icon-150x150.png',
     BASE_PATH + 'icons/ms-icon-310x310.png',
     //Icons
-    BASE_PATH = 'Images/Icons/bus-stop.png',
-    BASE_PATH = 'Images/Icons/icon.png',
+    BASE_PATH + 'Images/Icons/bus-stop.png',
+    BASE_PATH + 'Images/Icons/icon.png',
     //Maps
-    BASE_PATH = 'Images/maps/map1.png',
-    BASE_PATH = 'Images/maps/map2.png',
-    BASE_PATH = 'Images/maps/map3.png',
-    BASE_PATH = 'Images/maps/map4.png',
-    BASE_PATH = 'Images/maps/map5.png',
+    BASE_PATH + 'Images/maps/map1.png',
+    BASE_PATH + 'Images/maps/map2.png',
+    BASE_PATH + 'Images/maps/map3.png',
+    BASE_PATH + 'Images/maps/map4.png',
+    BASE_PATH + 'Images/maps/map5.png',
 
     
     // JavaScript
@@ -49,7 +49,7 @@ var CACHED_URLS = [
     BASE_PATH + 'manifest.json',
   // CSS and fonts
     'https://fonts.googleapis.com/css?family=Roboto',
-    BASE_PATH + 'style.css',
+    BASE_PATH + 'style.css'
 ];
 
 var googleMapsAPIJS = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyAYtiJpXh3CHsaOAncAEh8AXp6C9BoO6wY&callback=initMap';
