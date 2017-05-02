@@ -360,6 +360,7 @@ if (timetables) {
 var show = "open";
 var editBtn = document.getElementById('edit-btn');
 var deleteBtns = document.getElementsByClassName('delete-btn');
+if(editBtn){
 editBtn.addEventListener("click", showHideDelete, false);
 
 function animateLeft(obj, from, to) {
@@ -420,4 +421,5 @@ function DisplayFavourites(){
         displayFavourites.innerHTML += "<div class='overflow-div'><div class='bus-number' id='" + y + "'><a href='timeTableResults.html' class='busroute'> <p class='bus-route-num'>" + chosenFav[y].route + "</p> <div  class='bus-locations'><p>" + chosenFav[y].from + "-" + chosenFav[y].to + "</p></div></a><button class='delete-btn' value='"+  y +"'>Delete</button></div></div>";
     }
     deletebtnAL();
+}
 }
