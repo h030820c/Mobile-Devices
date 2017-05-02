@@ -148,7 +148,7 @@ footer {
 }
 
 .clicked-bus-times {
-    width: 175px;
+    width: 200px;
     display: flex;
     flex-wrap: wrap;
 }
