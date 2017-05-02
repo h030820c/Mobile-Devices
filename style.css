@@ -1,35 +1,40 @@
 * {
     margin: 0;
     padding: 0;
-}
-#timetables{
- display: none;   
+    font-family: 'Roboto', sans-serif;
+
 }
 
-#timetables{
- background-color: #43a047;
-color: white;
+#timetables {
+    display: none;
+}
+
+#timetables {
+    background-color: #43a047;
+    color: white;
     width: 90%;
     margin: 10px auto;
     padding: 5px;
-    
 }
-#timetables .bus-number a p{
-color: white;    
+
+#timetables .bus-number a p {
+    color: white;
 }
-.fav-hr{
- width: 90%;
+
+.fav-hr {
+    width: 90%;
     margin: 0 auto;
     border-color: white;
 }
+
 .top-nav-bar,
 footer {
     width: 100%;
     background: #43A047;
     color: white;
 }
-footer{
 
+footer {
     height: 12px;
 }
 
@@ -48,23 +53,27 @@ footer{
 .top-nav-bar h1 {
     font-size: 1em;
 }
-.side-nav, .side-nav-open{
- position: fixed;
+
+.side-nav,
+.side-nav-open {
+    position: fixed;
     width: 50%;
     height: 100vh;
     background: #43a047;
     z-index: 1000;
     margin-left: -50%;
     -webkit-transition: margin .35s ease-in-out;
-  transition: margin .35s ease-in-out;
+    transition: margin .35s ease-in-out;
 }
-.side-nav-open{
-       margin-left: 0%;
+
+.side-nav-open {
+    margin-left: 0%;
     -webkit-transition: margin .35s ease-in-out;
-  transition: margin .35s ease-in-out;
+    transition: margin .35s ease-in-out;
 }
-.nav-items{
- display: flex;
+
+.nav-items {
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 60%;
@@ -72,11 +81,13 @@ footer{
     margin: 20px auto;
     list-style: none;
 }
-.nav-items li a, .favourite-star
-{
-   text-decoration: none;
+
+.nav-items li a,
+.favourite-star {
+    text-decoration: none;
     color: white;
 }
+
 .home-search-form {
     width: 70%;
     margin: 20px auto;
@@ -94,15 +105,16 @@ footer{
 .search-bar {
     width: 95%;
     font-size: 1.2em;
-    
 }
 
 .search-bar-block {
     box-shadow: 2px 2px 2px 2px #DDD;
 }
-.search-submit{
- padding: 0 10px;   
+
+.search-submit {
+    padding: 0 10px;
 }
+
 .home-search-radio {
     justify-content: space-between;
 }
@@ -111,7 +123,8 @@ footer{
     display: none;
 }
 
-.home-search-radio label, #submit{
+.home-search-radio label,
+#submit {
     border: solid 2px #43A047;
     padding: 10px 12px;
     color: #43a047;
@@ -121,67 +134,88 @@ footer{
 }
 
 .home-search-radio input[type=radio]:checked +label {
-  
     background: #43a047;
     color: white;
 }
-#map, #map2{
- width: 100%;
+
+#map,
+#map2 {
+    width: 100%;
     height: 59vh;
-   }
-.clicked-bus-times{
- width: 150px;
+}
+
+.clicked-bus-times {
+    width: 150px;
     display: flex;
     flex-wrap: wrap;
 }
-.clicked-bus-times h4{
- width: 10%;   
+
+.clicked-bus-times h4 {
+    width: 10%;
 }
-#This-bus-times{
- display: flex;
+
+#This-bus-times {
+    display: flex;
     flex-wrap: wrap;
     width: 100%;
 }
-#This-bus-times p{
- padding:2px 6px;   
+
+#This-bus-times p {
+    padding: 2px 6px;
 }
+
+
 /*Bus timeTable*/
 
-.bus-number a{
- text-decoration: none;
+.bus-number a {
+    text-decoration: none;
     width: 100%;
     display: flex;
     color: black;
 }
-.bus-route-num{
- font-size: 50px;
+
+.bus-route-num {
+    font-size: 50px;
     color: #43a047;
     padding: 5px;
 }
-.bus-locations{
- padding:10px 5px;
+
+.bus-locations {
+    padding: 10px 5px;
     display: inline-table;
 }
-.bus-locations p{
- padding:0 5px;   
+
+.bus-locations p {
+    padding: 0 5px;
 }
-.recent-times{
+
+.recent-times {
     display: flex;
-   
 }
-.recent-times p{
- padding: 5px;   
+
+.recent-times p {
+    padding: 5px;
 }
+
+
 /*Bus Times Details*/
-#bus-number h1{font-size: 100px;
-color: #43a047;
+
+#bus-number h1 {
+    font-size: 100px;
+    color: #43a047;
 }
-h2{font-size: 26px;}
-#bus-from-to, #bus-number{
- text-align: center;
-margin: 20px 0;
+
+h2 {
+    font-size: 26px;
 }
-#timeTable-detail-times{
+
+#bus-from-to,
+#bus-number {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#timeTable-detail-times {
     width: 71%;
     height: 90px;
     overflow: hidden;
@@ -190,154 +224,193 @@ margin: 20px 0;
     justify-content: center;
     flex-wrap: wrap;
 }
-#timeTable-detail-times p{
+
+#timeTable-detail-times p {
     padding: 5px;
-    
 }
-#BusRouteNumber{
+
+#BusRouteNumber {
     text-align: center;
     margin: 30px 0;
 }
-#BusRouteNumber h1{
-    font-size:4em;
+
+#BusRouteNumber h1 {
+    font-size: 4em;
 }
-#BusRouteList{
- width: 80%;
+
+#BusRouteList {
+    width: 80%;
     margin: 20px auto;
 }
-.route-list-row{
- display: flex;
+
+.route-list-row {
+    display: flex;
     height: 24px;
 }
-.route-list-row img{
- width:  15px;
+
+.route-list-row img {
+    width: 15px;
     height: 15px;
     margin: auto 0;
 }
-.circle{
- margin: 0 30px;
+
+.circle {
+    margin: 0 30px;
     font-size: 1.2em;
     position: absolute;
     left: 55px;
     margin-top: -2px;
     color: #43a047;
 }
-.bus-stop-location{
- margin-left: 37px;
-padding-left: 25px;
+
+.bus-stop-location {
+    margin-left: 37px;
+    padding-left: 25px;
     border-left: solid #43a047 3px;
 }
-#map2{
+
+#map2 {
     width: 100%;
     height: auto;
     margin: 30px 0 0 0;
     overflow: hidden;
 }
-#map2 img{
- width: 140%;
-height: auto;
+
+#map2 img {
+    width: 140%;
+    height: auto;
     margin: -36px;
 }
+
+
 /*Fairs and prices*/
-.price, h2{
- margin: 10px 0;   
+
+.price,
+h2 {
+    margin: 10px 0;
 }
-h2{
- margin-left: 2%;   
+
+h2 {
+    margin-left: 2%;
 }
-table{
+
+table {
     width: 55%;
     margin: 0 auto;
- border-collapse: collapse;
+    border-collapse: collapse;
 }
-thead{
- background: #43a047;
+
+thead {
+    background: #43a047;
     color: white;
 }
-td{
- padding: 5px;   
+
+td {
+    padding: 5px;
 }
-tbody td:nth-child(odd){
+
+tbody td:nth-child(odd) {
     border-right: solid black 1px;
 }
-td:nth-child(even){
- text-align: center;   
+
+td:nth-child(even) {
+    text-align: center;
 }
+
+
 /*T's & C's*/
-.tandC p, h3{
-    width:90%;
+
+.tandC p,
+h3 {
+    width: 90%;
     margin: 10px auto;
     font-size: 0.8em;
 }
-.tandC p:last-child{
- margin-bottom: 20px;   
+
+.tandC p:last-child {
+    margin-bottom: 20px;
 }
-h3{
- color: #43a047;
+
+h3 {
+    color: #43a047;
     margin: 20px auto 5px auto;
     font-size: 1.2em;
 }
+
+
 /*contact*/
-address{
- font-style: normal;
+
+address {
+    font-style: normal;
     margin: 5px 23px;
 }
-.Contact a{
- text-decoration: none;
+
+.Contact a {
+    text-decoration: none;
     color: black;
     margin: 10px 20px;
-  
-    
 }
-.Contact a span{
- font-size: 1.8em;   
-    vertical-align: middle;  
+
+.Contact a span {
+    font-size: 1.8em;
+    vertical-align: middle;
     padding: 5px;
     color: #43a047;
 }
-.Contact a .envelope{
- font-size: 2.5em;   
-}
-.contact-us form{
- width: 80%;
-    margin: 0 auto 142px auto;
-    
+
+.Contact a .envelope {
+    font-size: 2.5em;
 }
 
-.contact-us form textarea, .contact-us form input{
- width: 100%;
-     font-size: 1em;
+.contact-us form {
+    width: 80%;
+    margin: 0 auto 142px auto;
+}
+
+.contact-us form textarea,
+.contact-us form input {
+    width: 100%;
+    font-size: 1em;
     height: 100px;
     border: solid #43a047 1px;
 }
-.contact-us form input{
- height: auto;
-   
+
+.contact-us form input {
+    height: auto;
 }
-.delete-btn{
+
+.delete-btn {
     margin-left: 100px;
     background-color: #43a047;
     color: white;
     border: solid white 1px;
     padding: 15px 26px;
 }
-#display-favourites .bus-number{
+
+#display-favourites .bus-number {
     display: flex;
     justify-content: flex-start;
-    align-items: center; 
+    align-items: center;
     width: 128%;
 }
-.bus-number div, .bus-number a{
-  align-self: center;
+
+.bus-number div,
+.bus-number a {
+    align-self: center;
 }
-#display-favourites .bus-number a{
+
+#display-favourites .bus-number a {
     width: 61%;
 }
-.overflow-div{overflow: scroll; }
-#edit-btn{
-    margin: 20px;
 
+.overflow-div {
+    overflow: scroll;
 }
-::-webkit-scrollbar { 
-    display: block; 
+
+#edit-btn {
+    margin: 20px;
+}
+
+::-webkit-scrollbar {
+    display: block;
 }
