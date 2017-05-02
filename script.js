@@ -299,6 +299,35 @@ var deleteBtns = document.getElementsByClassName('delete-btn');
 if (editBtn) {
     editBtn.addEventListener("click", showHideDelete, false);
 
+
+    function showHideDelete() {
+        if (show === "open") {
+            for (var i = 0; i < deleteBtns.length; i++) {
+                animateLeft(deleteBtns[i], 90, 3);
+            }
+            show = "close";
+        } else {
+            for (var i = 0; i < deleteBtns.length; i++) {
+                animateRight(deleteBtns[i], 3, 90);
+            }
+            show = "open";
+        }
+    }
+
+  
+    }
+
+    function deleteFavourite() {
+        var choice = this.value;
+        var favourites = JSON.parse(localStorage.getItem("Favourite"));
+        favourites.splice(choice, 1);
+        console.log(favourites);
+        localStorage.setItem("Favourite", JSON.stringify(favourites));
+        displayFavourites.innerHTML = "";
+        DisplayFavourites();
+    }
+}
+
     function animateLeft(obj, from, to) {
         if (from <= to) {} else {
             var box = obj;
@@ -318,47 +347,17 @@ if (editBtn) {
             }, 0.5)
         }
     }
-
-    function showHideDelete() {
-        if (show === "open") {
-            for (var i = 0; i < deleteBtns.length; i++) {
-                animateLeft(deleteBtns[i], 90, 3);
-            }
-            show = "close";
-        } else {
-            for (var i = 0; i < deleteBtns.length; i++) {
-                animateRight(deleteBtns[i], 3, 90);
-            }
-            show = "open";
-        }
+function DisplayFavourites() {
+    chosenFav = JSON.parse(localStorage.getItem("Favourite"));
+    for (var y = 0; y < chosenFav.length; y++) {
+        displayFavourites.innerHTML += "<div class='overflow-div'><div class='bus-number' id='" + y + "'><a href='timeTableResults.html' class='busroute'> <p class='bus-route-num'>" + chosenFav[y].route + "</p> <div  class='bus-locations'><p>" + chosenFav[y].from + "-" + chosenFav[y].to + "</p></div></a><button class='delete-btn' value='" + y + "'>Delete</button></div></div>";
     }
-
-    function deletebtnAL() {
+    deletebtnAL();
+}
+  function deletebtnAL() {
         deleteBtns = document.getElementsByClassName('delete-btn');
         for (var ty = 0; ty < deleteBtns.length; ty++) {
 
             deleteBtns[ty].addEventListener("click", deleteFavourite, false);
 
         }
-    }
-
-    function deleteFavourite() {
-        var choice = this.value;
-        var favourites = JSON.parse(localStorage.getItem("Favourite"));
-        favourites.splice(choice, 1);
-        console.log(favourites);
-        localStorage.setItem("Favourite", JSON.stringify(favourites));
-        displayFavourites.innerHTML = "";
-        DisplayFavourites();
-
-    }
-
-    
-}
-function DisplayFavourites() {
-        chosenFav = JSON.parse(localStorage.getItem("Favourite"));
-        for (var y = 0; y < chosenFav.length; y++) {
-            displayFavourites.innerHTML += "<div class='overflow-div'><div class='bus-number' id='" + y + "'><a href='timeTableResults.html' class='busroute'> <p class='bus-route-num'>" + chosenFav[y].route + "</p> <div  class='bus-locations'><p>" + chosenFav[y].from + "-" + chosenFav[y].to + "</p></div></a><button class='delete-btn' value='" + y + "'>Delete</button></div></div>";
-        }
-        deletebtnAL();
-    }
