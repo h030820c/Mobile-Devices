@@ -417,8 +417,6 @@ function deleteFavourite(){
 function DisplayFavourites(){
     chosenFav = JSON.parse(localStorage.getItem("Favourite"));
     for (var y = 0; y < chosenFav.length; y++) {
-        
-       
         displayFavourites.innerHTML += "<div class='overflow-div'><div class='bus-number' id='" + y + "'><a href='timeTableResults.html' class='busroute'> <p class='bus-route-num'>" + chosenFav[y].route + "</p> <div  class='bus-locations'><p>" + chosenFav[y].from + "-" + chosenFav[y].to + "</p></div></a><button class='delete-btn' value='"+  y +"'>Delete</button></div></div>";
     }
     deletebtnAL();
