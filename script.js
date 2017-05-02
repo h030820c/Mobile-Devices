@@ -339,7 +339,7 @@ if (BusRouteNum) {
     BusRouteNum.innerHTML = "<h1>" + Timetable[routeNum].Route + "</h1> <h2>" + Timetable[routeNum].From + "-" + Timetable[routeNum].To + "</h2>";
 
     for (var r = 0; r < Timetable[busNum].Stops.length; r++) {
-        BusRouteList.innerHTML += "<div class='route-list-row'><img src='images/Icons/bus-stop.png' alt='bus stop icon'><p class='circle'>	&#9679;</p><p class='bus-stop-location'>" + Timetable[busNum].Stops[r] + "</p></div>";
+        BusRouteList.innerHTML += "<div class='route-list-row'><img src='Images/Icons/bus-stop.png' alt='bus stop icon'><p class='circle'>	&#9679;</p><p class='bus-stop-location'>" + Timetable[busNum].Stops[r] + "</p></div>";
     }
 
 }
