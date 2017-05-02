@@ -160,6 +160,7 @@ footer{
 }
 .bus-locations{
  padding:10px 5px;
+    display: inline-table;
 }
 .bus-locations p{
  padding:0 5px;   
@@ -312,4 +313,31 @@ address{
 .contact-us form input{
  height: auto;
    
+}
+.delete-btn{
+    margin-left: 90px;
+    background-color: #43a047;
+    color: white;
+    border: solid white 1px;
+    padding: 15px 26px;
+}
+#display-favourites .bus-number{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center; 
+    width: 125%;
+}
+.bus-number div, .bus-number a{
+  align-self: center;
+}
+#display-favourites .bus-number a{
+    width: 61%;
+}
+.overflow-div{overflow: scroll; }
+#edit-btn{
+    margin: 20px;
+
+}
+::-webkit-scrollbar { 
+    display: block; 
 }

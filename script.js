@@ -37,11 +37,13 @@ function initMap() {
         }
     };
     var thisBusTimes = "";
+
     function addMarker(feature) {
         var content = "";
+
         function addContent() {
             thisBusTimes = "";
-            content ="";
+            content = "";
             infowindow.open(map, marker);
             if (features[marker.get("id")].type == "bus") {
                 for (var w = 0; w <= Timetable[marker.get("id")].Times.length - 1; w++) {
@@ -78,7 +80,7 @@ function initMap() {
             type: 'busstop',
             BusNum: '0',
             Buses: [Timetable[0], Timetable[3], Timetable[8]]
-          },{
+          }, {
             position: new google.maps.LatLng(53.008241, -2.180795),
             type: 'busstop',
             BusNum: '1',
@@ -188,8 +190,8 @@ if (displayResults) {
         displayResults.innerHTML = "<h3 id='nodata'>No Results Found</h3>";
     } else {
         for (var l = 0; l < found.length; l++) {
-            
-            
+
+
             displayResults.innerHTML += "<div class='bus-number' id='" + found[l].id + "'><a href='timeTableResults.html' class='busroute'> <p class='bus-route-num'>" + found[l].Route + "</p> <div  class='bus-locations'><p>" + found[l].From + "-" + found[l].To + "</p><div class='recent-times'></div></div></a> </div>";
         }
     }
@@ -234,7 +236,7 @@ var busFromTo = document.getElementById("bus-from-to");
 var busNum = localStorage.getItem("Chosen");
 if (busNumber) {
     busNumber.innerHTML = "<h1>" + Timetable[busNum].Route + "</h1>";
-    mapImage. innerHTML = "<img src='Images/maps/"+ Timetable[busNum].map +".png' alt='"+ Timetable[busNum].from +"-"+ Timetable[busNum].to +" Map' class='mapimage'>";
+    mapImage.innerHTML = "<img src='Images/maps/" + Timetable[busNum].map + ".png' alt='" + Timetable[busNum].from + "-" + Timetable[busNum].to + " Map' class='mapimage'>";
 }
 if (busFromTo) {
     busFromTo.innerHTML = "<h2>" + Timetable[busNum].From + "-" + Timetable[busNum].To + "</h2>";
@@ -266,11 +268,11 @@ if (showMore) {
 }
 //Favorites
 var favouriteBtn = document.getElementById("favourite-btn");
-if(localStorage.getItem("Favourite") == null){
- var favourites = [];   
-    
-}else{
-var favourites = JSON.parse(localStorage.getItem("Favourite"));
+if (localStorage.getItem("Favourite") == null) {
+    var favourites = [];
+
+} else {
+    var favourites = JSON.parse(localStorage.getItem("Favourite"));
 }
 if (favouriteBtn) {
     favouriteBtn.addEventListener("click", addFavourite);
@@ -286,25 +288,25 @@ if (favouriteBtn) {
         localStorage.setItem("Favourite", JSON.stringify(favourites));
         console.log("Hello");
     }
-    
+
 }
-    //Display Favourites
-    var displayFavourites = document.getElementById("display-favourites");
+//Display Favourites
+var displayFavourites = document.getElementById("display-favourites");
 
-    if (displayFavourites) {
-        var chosenFav = JSON.parse(localStorage.getItem("Favourite"));
-        console.log(chosenFav);
-        if(chosenFav !== null){
-        for (var y = 0; y <= chosenFav.length; y++) {
-            console.log(y);
-            displayFavourites.innerHTML += "<div class='bus-number' id='" + y + "'><a href='timeTableResults.html' class='busroute'> <p class='bus-route-num'>" + chosenFav[y].route + "</p> <div  class='bus-locations'><p>" + chosenFav[y].from + "-" + chosenFav[y].to + "</p>";
 
-        }
-        }else{
-         console.log("No Data Found");   
-        }
 
+
+if (displayFavourites) {
+    var chosenFav = JSON.parse(localStorage.getItem("Favourite"));
+    console.log(chosenFav);
+    if (chosenFav !== null) {
+        DisplayFavourites();
+        
+    } else {
+        console.log("No Data Found");
     }
+
+}
 
 
 //bus Route
@@ -345,12 +347,79 @@ if (BusRouteNum) {
 
 
 var timetables = document.getElementById("timetables");
+if (timetables) {
+    timetables.innerHTML += "<h2>My Favourites</h2>";
+    var fav = JSON.parse(localStorage.getItem("Favourite"));
+    for (var j = 0; j < 5; j++) {
 
-timetables.innerHTML += "<h2>My Favourites</h2>";
-var fav = JSON.parse(localStorage.getItem("Favourite"));
-    for (var j=0; j<5; j++) {
+        timetables.innerHTML += "<hr class='fav-hr'><div class='bus-number' id='" + j + "'><a href='timeTableResults.html' class='busroute'> <p class='bus-route-num'>" + fav[j].route + "</p> <div  class='bus-locations'><p>" + fav[j].from + "-" + fav[j].to + "</p></div></div>";
 
-       timetables.innerHTML += "<hr class='fav-hr'><div class='bus-number' id='" + j + "'><a href='timeTableResults.html' class='busroute'> <p class='bus-route-num'>" + fav[j].route + "</p> <div  class='bus-locations'><p>" + fav[j].from + "-" + fav[j].to + "</p></div></div>";
-        
-    
+
     }
+}
+var show = "open";
+var editBtn = document.getElementById('edit-btn');
+var deleteBtns = document.getElementsByClassName('delete-btn');
+editBtn.addEventListener("click", showHideDelete, false);
+
+function animateLeft(obj, from, to) {
+    if (from <= to) {} else {
+        var box = obj;
+        box.style.marginLeft = from + "px";
+        setTimeout(function () {
+            animateLeft(obj, from - 1, to);
+        }, 0.5)
+    }
+}
+
+function animateRight(obj, from, to) {
+    if (from >= to) {} else {
+        var box = obj;
+        box.style.marginLeft = from + "px";
+        setTimeout(function () {
+            animateRight(obj, from + 1, to);
+        }, 0.5)
+    }
+}
+
+function showHideDelete() {
+    if (show === "open") {
+        for (var i = 0; i < deleteBtns.length; i++) {
+            animateLeft(deleteBtns[i], 90, 3);
+        }
+        show = "close";
+    } else {
+        for (var i = 0; i < deleteBtns.length; i++) {
+            animateRight(deleteBtns[i], 3, 90);
+        }
+        show = "open";
+    }
+}
+function deletebtnAL(){
+    deleteBtns = document.getElementsByClassName('delete-btn');
+for( var ty = 0; ty < deleteBtns.length; ty++){
+    
+    deleteBtns[ty].addEventListener("click", deleteFavourite, false);
+    
+}
+}
+function deleteFavourite(){
+    var choice = this.value;
+    var favourites = JSON.parse(localStorage.getItem("Favourite"));
+    favourites.splice(choice ,1);
+    console.log(favourites);
+    localStorage.setItem("Favourite",JSON.stringify(favourites));
+    displayFavourites.innerHTML = "";
+    DisplayFavourites();
+
+}
+
+function DisplayFavourites(){
+    chosenFav = JSON.parse(localStorage.getItem("Favourite"));
+    for (var y = 0; y < chosenFav.length; y++) {
+        
+       
+        displayFavourites.innerHTML += "<div class='overflow-div'><div class='bus-number' id='" + y + "'><a href='timeTableResults.html' class='busroute'> <p class='bus-route-num'>" + chosenFav[y].route + "</p> <div  class='bus-locations'><p>" + chosenFav[y].from + "-" + chosenFav[y].to + "</p></div></a><button class='delete-btn' value='"+  y +"'>Delete</button></div></div>";
+    }
+    deletebtnAL();
+}
