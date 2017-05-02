@@ -256,7 +256,7 @@ if (showMore) {
 
 
         if (pos == "hide") {
-            timeTableDetailTimes.style.height = "175px";
+            timeTableDetailTimes.style.height = "160px";
             showMore.innerHTML = "show less";
             pos = "show";
         } else {
