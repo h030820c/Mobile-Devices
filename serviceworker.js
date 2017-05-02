@@ -30,7 +30,17 @@ var CACHED_URLS = [
     BASE_PATH + 'icons/ms-icon-144x144.png',
     BASE_PATH + 'icons/ms-icon-150x150.png',
     BASE_PATH + 'icons/ms-icon-310x310.png',
+    //Icons
+    BASE_PATH = 'Images/Icons/bus-stop.png',
+    BASE_PATH = 'Images/Icons/icon.png',
+    //Maps
+    BASE_PATH = 'Images/maps/map1.png',
+    BASE_PATH = 'Images/maps/map2.png',
+    BASE_PATH = 'Images/maps/map3.png',
+    BASE_PATH = 'Images/maps/map4.png',
+    BASE_PATH = 'Images/maps/map5.png',
 
+    
     // JavaScript
     BASE_PATH + 'offline-map.js',
     BASE_PATH + 'script.js',
