@@ -239,7 +239,6 @@ if (favouriteBtn) {
 var displayFavourites = document.getElementById("display-favourites");
 if (displayFavourites) {
     var chosenFav = JSON.parse(localStorage.getItem("Favourite"));
-    console.log(chosenFav);
     if (chosenFav !== null) {
         DisplayFavourites();
     } else {
