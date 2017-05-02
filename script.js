@@ -74,7 +74,7 @@ function initMap() {
             position: new google.maps.LatLng(53.008241, -2.180795),
             type: 'busstop',
             BusNum: '1',
-            Buses: [Timetable[3], Timetable[6], Timetable[9]]
+            Buses: [Timetable[3], Timetable[6], Timetable[8]]
           }, {
             position: new google.maps.LatLng(53.0110, -2.1809),
             type: 'bus',
