@@ -169,7 +169,7 @@ footer {
 
 
 /*Bus timeTable*/
-#bus-times{
+#bus-times, #Bus-Route{
  width: 95%;
     margin: 0 auto;
 }
