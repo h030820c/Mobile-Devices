@@ -265,9 +265,6 @@ function detailNumRoute(event) {
 
 }
 
-
-
-
 var BusRouteNum = document.getElementById("BusRouteNumber");
 var BusRouteList = document.getElementById("BusRouteList");
 var routeNum = localStorage.getItem("ChosenRoute");
@@ -279,8 +276,6 @@ if (BusRouteNum) {
     }
 
 }
-
-
 
 var timetables = document.getElementById("timetables");
 if (timetables) {
@@ -299,7 +294,6 @@ var deleteBtns = document.getElementsByClassName('delete-btn');
 if (editBtn) {
     editBtn.addEventListener("click", showHideDelete, false);
 
-
     function showHideDelete() {
         if (show === "open") {
             for (var i = 0; i < deleteBtns.length; i++) {
@@ -313,40 +307,39 @@ if (editBtn) {
             show = "open";
         }
     }
+}
 
-  
-    }
+function deleteFavourite() {
+    var choice = this.value;
+    var favourites = JSON.parse(localStorage.getItem("Favourite"));
+    favourites.splice(choice, 1);
+    console.log(favourites);
+    localStorage.setItem("Favourite", JSON.stringify(favourites));
+    displayFavourites.innerHTML = "";
+    DisplayFavourites();
+}
 
-    function deleteFavourite() {
-        var choice = this.value;
-        var favourites = JSON.parse(localStorage.getItem("Favourite"));
-        favourites.splice(choice, 1);
-        console.log(favourites);
-        localStorage.setItem("Favourite", JSON.stringify(favourites));
-        displayFavourites.innerHTML = "";
-        DisplayFavourites();
+
+function animateLeft(obj, from, to) {
+    if (from <= to) {} else {
+        var box = obj;
+        box.style.marginLeft = from + "px";
+        setTimeout(function () {
+            animateLeft(obj, from - 1, to);
+        }, 0.5)
     }
 }
 
-    function animateLeft(obj, from, to) {
-        if (from <= to) {} else {
-            var box = obj;
-            box.style.marginLeft = from + "px";
-            setTimeout(function () {
-                animateLeft(obj, from - 1, to);
-            }, 0.5)
-        }
+function animateRight(obj, from, to) {
+    if (from >= to) {} else {
+        var box = obj;
+        box.style.marginLeft = from + "px";
+        setTimeout(function () {
+            animateRight(obj, from + 1, to);
+        }, 0.5)
     }
+}
 
-    function animateRight(obj, from, to) {
-        if (from >= to) {} else {
-            var box = obj;
-            box.style.marginLeft = from + "px";
-            setTimeout(function () {
-                animateRight(obj, from + 1, to);
-            }, 0.5)
-        }
-    }
 function DisplayFavourites() {
     chosenFav = JSON.parse(localStorage.getItem("Favourite"));
     for (var y = 0; y < chosenFav.length; y++) {
@@ -354,10 +347,12 @@ function DisplayFavourites() {
     }
     deletebtnAL();
 }
-  function deletebtnAL() {
-        deleteBtns = document.getElementsByClassName('delete-btn');
-        for (var ty = 0; ty < deleteBtns.length; ty++) {
 
-            deleteBtns[ty].addEventListener("click", deleteFavourite, false);
+function deletebtnAL() {
+    deleteBtns = document.getElementsByClassName('delete-btn');
+    for (var ty = 0; ty < deleteBtns.length; ty++) {
 
-        }
+        deleteBtns[ty].addEventListener("click", deleteFavourite, false);
+
+    }
+}
