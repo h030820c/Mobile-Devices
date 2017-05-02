@@ -281,7 +281,12 @@ h2 {
     height: auto;
     margin: -36px;
 }
-
+#show-more{
+ width: 30%;
+float: right;
+    margin-right: 33px;
+    color: #43a047;
+}
 
 /*Fairs and prices*/
 
