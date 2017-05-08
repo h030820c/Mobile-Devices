@@ -432,3 +432,115 @@ address {
 ::-webkit-scrollbar {
     display: block;
 }
+.trash-can{
+ display: none;   
+}
+@media(min-width: 768px){
+    #edit-btn{
+    display: none;
+    }
+    #bus-times, #display-favourites{
+     display: flex;
+        flex-flow: wrap;
+        justify-content: flex-start;
+        
+    }
+    .overflow-div{
+        overflow:visible;
+    }
+ #display-favourites .bus-number{
+  width: 175px;   
+ }
+  .bus-number{
+  width: 175px;
+     height: 175px;
+     background: #007991;
+     margin: 30px;
+     border-radius: 100%;
+     color: white;
+     display: flex;
+     flex-direction: column; 
+ }
+.bus-number a, .bus-number a p{
+ flex-direction: column;
+    color: white;
+    text-align: center;
+}
+    .delete-btn{
+     display: none;   
+    }
+    .recent-times{
+     display: none;   
+    }
+    .trash-can{
+     display: block;
+        background: none;
+        border: none;
+        margin: -40px 30px;
+        padding: 0px;
+        width: 20px;
+        height: 20px;
+        opacity: 0.6;
+        float: right;
+    }
+    #BusRouteList{
+     display: block;   
+    }
+    #showmore, #bus-tabs{
+     display: none;   
+    }
+#bus-info{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+    #timeTable-detail-times,#BusRouteList
+    {
+     width: 40%;   
+    }
+    #timeTable-detail-times{
+     order: 2;  
+        height: 200px;
+        margin-top: 20px;
+    }
+    .prices-tables{
+     display: flex;
+        flex-wrap: wrap;
+    }
+    .price{
+     margin: 8px 0;
+        width:50%;
+    }
+    #map{
+     width: 47%;
+        float: right;
+        height: 90vh;
+    }
+    #timetables, .home-search-form{
+     width: 45%;
+        float: left;
+        padding: 30px;
+    }
+    footer{
+     clear: both;   
+    }
+    #timetables{
+        height: 45vh;
+        overflow: scroll;
+        background: none;
+     display: flex;
+    flex-wrap: wrap;
+        padding-top: 40px;
+    }
+    #timetables h2{
+     width: 45%; 
+        margin: -57px 0;
+        color: #007991;
+        position: fixed;
+        background: white;
+    }
+    #timetables .bus-number{
+     margin: 20px;   
+    }
+}

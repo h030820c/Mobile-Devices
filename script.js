@@ -281,7 +281,7 @@ if (timetables) {
     if(fav.length !=0){
     for (var j = 0; j < 5; j++) {
 
-        timetables.innerHTML += "<hr class='fav-hr'><div class='bus-number' id='" + j + "'><a href='timeTableResults.html' class='busroute'> <p class='bus-route-num'>" + fav[j].route + "</p> <div  class='bus-locations'><p>" + fav[j].from + "-" + fav[j].to + "</p></div></div>";
+        timetables.innerHTML += "<div class='bus-number' id='" + j + "'><a href='timeTableResults.html' class='busroute'> <p class='bus-route-num'>" + fav[j].route + "</p> <div  class='bus-locations'><p>" + fav[j].from + "-" + fav[j].to + "</p></div></div>";
 
 
     }
@@ -341,7 +341,7 @@ function animateRight(obj, from, to) {
 function DisplayFavourites() {
     chosenFav = JSON.parse(localStorage.getItem("Favourite"));
     for (var y = 0; y < chosenFav.length; y++) {
-        displayFavourites.innerHTML += "<div class='overflow-div'><div class='bus-number' id='" + y + "'><a href='timeTableResults.html' class='busroute'> <p class='bus-route-num'>" + chosenFav[y].route + "</p> <div  class='bus-locations'><p>" + chosenFav[y].from + "-" + chosenFav[y].to + "</p></div></a><button class='delete-btn' value='" + y + "'>Delete</button></div></div>";
+        displayFavourites.innerHTML += "<div class='overflow-div'><div class='bus-number' id='" + y + "'><a href='timeTableResults.html' class='busroute'> <p class='bus-route-num'>" + chosenFav[y].route + "</p> <div  class='bus-locations'><p>" + chosenFav[y].from + "-" + chosenFav[y].to + "</p></div></a><button class='delete-btn' value='" + y + "'>Delete</button></div><img src='Images/Icons/waste-bin.png' alt='delete button trash can' class='delete-btn trash-can' value'"+y+"' ></div>";
     }
     deletebtnAL();
 }
