@@ -227,7 +227,7 @@ if (showMore) {
 
 var tabChecked = document.getElementsByClassName("tab-checked");
 var tabUnchecked = document.getElementsByClassName("tab-unchecked");
-
+if(tabUnchecked[0]){
 tabUnchecked[0].addEventListener("click", function(){
     this.className += " tab-checked";
         tabUnchecked[1].classList.remove("tab-checked");
@@ -242,7 +242,7 @@ tabUnchecked[1].addEventListener("click", function(){
     showMore.style.display = "none";
     timeTableDetailTimes.style.display = "none";
 });
-
+}
 //Favorites
 var favouriteBtn = document.getElementById("favourite-btn");
 if (localStorage.getItem("Favourite") == null) {
