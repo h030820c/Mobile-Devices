@@ -1,8 +1,8 @@
 {
  "name": "First Bus",
 "short_name": "FBus",
-"background_color": "#43A047",
-"theme_color": "#43A047",
+"background_color": "#007991",
+"theme_color": "#007991",
 
  "icons": [
   {

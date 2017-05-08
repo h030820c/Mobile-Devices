@@ -535,6 +535,7 @@ address {
     }
     #timetables h2{
      width: 45%; 
+        padding: 20px 0px;
         margin: -57px 0;
         color: #007991;
         position: fixed;
