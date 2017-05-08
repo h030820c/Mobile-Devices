@@ -279,7 +279,7 @@ if (timetables) {
     timetables.innerHTML += "<h2>My Favourites</h2>";
     var fav = JSON.parse(localStorage.getItem("Favourite"));
     if(fav.length !=0){
-    for (var j = 0; j < 5; j++) {
+    for (var j = 0; j < fav.length; j++) {
 
         timetables.innerHTML += "<div class='bus-number' id='" + j + "'><a href='timeTableResults.html' class='busroute'> <p class='bus-route-num'>" + fav[j].route + "</p> <div  class='bus-locations'><p>" + fav[j].from + "-" + fav[j].to + "</p></div></div>";
 
