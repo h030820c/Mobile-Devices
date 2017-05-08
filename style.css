@@ -10,7 +10,7 @@
 }
 
 #timetables {
-    background-color: #43a047;
+    background-color: #007991;
     color: white;
     width: 90%;
     margin: 10px auto;
@@ -30,7 +30,7 @@
 .top-nav-bar,
 footer {
     width: 100%;
-    background: #43A047;
+    background: #007991;
     color: white;
 }
 
@@ -51,7 +51,7 @@ footer {
 }
 
 .top-nav-bar h1 {
-    font-size: 1em;
+    font-size: 1.6em;
 }
 
 .side-nav,
@@ -59,7 +59,7 @@ footer {
     position: fixed;
     width: 50%;
     height: 100vh;
-    background: #43a047;
+    background: #007991;
     z-index: 1000;
     margin-left: -50%;
     -webkit-transition: margin .35s ease-in-out;
@@ -93,7 +93,7 @@ footer {
     margin: 20px auto;
     display: flex;
     flex-direction: column;
-    color: #43a047;
+    color: #007991;
 }
 
 .home-search-form div {
@@ -128,23 +128,23 @@ footer {
 
 .home-search-radio label,
 #submit {
-    border: solid 2px #43A047;
+    border: solid 2px #007991;
     padding: 10px 12px;
-    color: #43a047;
+    color: #007991;
     width: 22%;
     text-align: center;
     background-color: white;
 }
 
 .home-search-radio input[type=radio]:checked +label {
-    background: #43a047;
+    background: #007991;
     color: white;
 }
 
 #map,
 #map2 {
     width: 100%;
-    height: 59vh;
+    height: 57vh;
 }
 
 .clicked-bus-times {
@@ -182,7 +182,7 @@ footer {
 
 .bus-route-num {
     font-size: 50px;
-    color: #43a047;
+    color: #007991;
     padding: 5px;
 }
 
@@ -208,16 +208,30 @@ footer {
 
 #bus-number h1 {
     font-size: 100px;
-    color: #43a047;
+    color: #007991;
 }
 
 h2 {
     font-size: 26px;
 }
-
+#bus-tabs{
+ display: flex;
+    justify-content:space-around;
+    width: 50%;
+    margin: 10px auto;
+}
+.tab-unchecked{
+    border: solid #007991;
+    padding: 5px 10px;
+}
+.tab-checked{
+ background: #007991;
+    color: white;
+}
 #bus-from-to,
 #bus-number {
     text-align: center;
+    margin-top: 20px;
 
 }
 #bus-from-to h5{
@@ -225,7 +239,7 @@ h2 {
 }
 #timeTable-detail-times {
     width: 71%;
-    height: 90px;
+    height: 70px;
     overflow: hidden;
     margin: 0 auto;
     display: flex;
@@ -234,7 +248,7 @@ h2 {
 }
 
 #timeTable-detail-times p {
-    padding: 5px;
+    padding:0px 3px;
 }
 
 #BusRouteNumber {
@@ -249,6 +263,7 @@ h2 {
 #BusRouteList {
     width: 80%;
     margin: 20px auto;
+    display: none;
 }
 
 .route-list-row {
@@ -262,25 +277,16 @@ h2 {
     margin: auto 0;
 }
 
-.circle {
-    margin: 0 34px;
-    font-size: 1.2em;
-    position: absolute;
-    left: 55px;
-    margin-top: -2px;
-    color: #43a047;
-}
-
 .bus-stop-location {
     margin-left: 37px;
-    padding-left: 25px;
-    border-left: solid #43a047 3px;
+
+
 }
 
 #map2 {
     width: 100%;
     height: auto;
-    margin: 30px 0 0 0;
+    margin: 41px 0 0 0;
     overflow: hidden;
 }
 
@@ -291,7 +297,8 @@ h2 {
 }
 #show-more{
 text-align: center;
-    color: #43a047;
+    color: #007991;
+    display: none;
 }
 
 /*Fairs and prices*/
@@ -312,7 +319,7 @@ table {
 }
 
 thead {
-    background: #43a047;
+    background: #007991;
     color: white;
 }
 
@@ -343,7 +350,7 @@ h3 {
 }
 
 h3 {
-    color: #43a047;
+    color: #007991;
     margin: 20px auto 5px auto;
     font-size: 1.2em;
 }
@@ -366,7 +373,7 @@ address {
     font-size: 1.8em;
     vertical-align: middle;
     padding: 5px;
-    color: #43a047;
+    color: #007991;
 }
 
 .Contact a .envelope {
@@ -383,7 +390,7 @@ address {
     width: 100%;
     font-size: 1em;
     height: 100px;
-    border: solid #43a047 1px;
+    border: solid #007991 1px;
 }
 
 .contact-us form input {
@@ -392,7 +399,7 @@ address {
 
 .delete-btn {
     margin-left: 100px;
-    background-color: #43a047;
+    background-color: #007991;
     color: white;
     border: solid white 1px;
     padding: 15px 26px;

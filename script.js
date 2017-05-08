@@ -198,6 +198,15 @@ if (timeTableDetailTimes) {
     }
 }
 
+var BusRouteList = document.getElementById("BusRouteList");
+
+if (BusRouteList) {
+    for (var r = 0; r < Timetable[busNum].Stops.length; r++) {
+        BusRouteList.innerHTML += "<div class='route-list-row'><img src='Images/Icons/bus-stop.png' alt='bus stop icon'><p class='bus-stop-location'>" + Timetable[busNum].Stops[r] + "</p></div>";
+    }
+
+}
+
 var showMore = document.getElementById('show-more');
 if (showMore) {
     showMore.addEventListener("click", showHide, false);
@@ -205,16 +214,35 @@ if (showMore) {
 
     function showHide() {
         if (pos == "hide") {
-            timeTableDetailTimes.style.height = "155px";
+            timeTableDetailTimes.style.height = "133px";
             showMore.innerHTML = "show less";
             pos = "show";
         } else {
-            timeTableDetailTimes.style.height = "90px";
+            timeTableDetailTimes.style.height = "70px";
             showMore.innerHTML = "show more";
             pos = "hide";
         }
     }
 }
+
+var tabChecked = document.getElementsByClassName("tab-checked");
+var tabUnchecked = document.getElementsByClassName("tab-unchecked");
+
+tabUnchecked[0].addEventListener("click", function(){
+    this.className += " tab-checked";
+        tabUnchecked[1].classList.remove("tab-checked");
+    BusRouteList.style.display = "none";
+        showMore.style.display = "block";
+    timeTableDetailTimes.style.display = "flex";
+});
+tabUnchecked[1].addEventListener("click", function(){
+ this.className += " tab-checked";
+    tabUnchecked[0].classList.remove("tab-checked");
+      BusRouteList.style.display = "block";
+    showMore.style.display = "none";
+    timeTableDetailTimes.style.display = "none";
+});
+
 //Favorites
 var favouriteBtn = document.getElementById("favourite-btn");
 if (localStorage.getItem("Favourite") == null) {
@@ -244,36 +272,6 @@ if (displayFavourites) {
     } else {
         displayFavourites.innerHTML += "No Favourites added";
     }
-}
-//bus Route
-var busRoute = document.getElementById("Bus-Route");
-if (busRoute) {
-    for (var c = 0; c < Timetable.length; c++) {
-        busRoute.innerHTML += "<div class='bus-number' ><a href='RouteResults.html' class='RouteNumber' id='" + c + "'> <p class='bus-route-num'>" + Timetable[c].Route + "</p> <div  class='bus-locations'><p>" + Timetable[c].From + "-" + Timetable[c].To + "</p><div class='recent-times'></div></div></a> </div>";
-    }
-}
-var NumRoute = document.getElementsByClassName('RouteNumber');
-for (var v = 0; v < NumRoute.length; v++) {
-    NumRoute[v].addEventListener("click", detailNumRoute);
-
-
-}
-
-function detailNumRoute(event) {
-    localStorage.setItem("ChosenRoute", this.id);
-
-}
-
-var BusRouteNum = document.getElementById("BusRouteNumber");
-var BusRouteList = document.getElementById("BusRouteList");
-var routeNum = localStorage.getItem("ChosenRoute");
-if (BusRouteNum) {
-    BusRouteNum.innerHTML = "<h1>" + Timetable[routeNum].Route + "</h1> <h2>" + Timetable[routeNum].From + "-" + Timetable[routeNum].To + "</h2>";
-
-    for (var r = 0; r < Timetable[busNum].Stops.length; r++) {
-        BusRouteList.innerHTML += "<div class='route-list-row'><img src='Images/Icons/bus-stop.png' alt='bus stop icon'><p class='circle'>	&#9679;</p><p class='bus-stop-location'>" + Timetable[busNum].Stops[r] + "</p></div>";
-    }
-
 }
 
 var timetables = document.getElementById("timetables");
